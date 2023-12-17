@@ -1,19 +1,8 @@
-<a href="https://aimeos.org/">
-    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
-</a>
 
-# Aimeos TYPO3 extension
 
-[![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
-[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+# Clarity
 
-:star: Star us on GitHub — it motivates us a lot!
-
-[Aimeos](https://aimeos.org/TYPO3) is THE professional, full-featured and
-high performance e-commerce extension for TYPO3!  You can install it in your
-existing TYPO3 web site within 5 minutes and can adapt, extend, overwrite
-and customize anything to your needs.
+Introducing Clarity, a game-changing AI-powered assistant that takes the complexity out of creating a knowledge base for sales professionals. This cutting-edge language model (LLM) driven bot is designed with simplicity in mind, allowing users to effortlessly build a comprehensive knowledge repository without the need for extensive technical expertise. With Clarity, you can bid farewell to the cumbersome learning curves associated with traditional knowledge management systems. Leveraging natural language processing, Clarity intuitively captures, organizes, and updates information in real-time, ensuring that your sales team is always equipped with the latest and most relevant data. Say hello to a new era of streamlined sales enablement, where harnessing the power of information is as simple as engaging in a conversation with Clarity.
 
 ![aimeos-frontend](https://user-images.githubusercontent.com/8647429/212348410-55cbaa00-722a-4a30-8b57-da9e173e0675.jpg)
 
