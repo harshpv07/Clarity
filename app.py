@@ -1,8 +1,3 @@
-%%writefile app.py
-
-
-
-
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
@@ -12,8 +7,8 @@ from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
-from langchain.llms import HuggingFaceHub
-
+from bs4 import BeautifulSoup
+import requests
 
 
 
@@ -86,9 +81,16 @@ def get_text_chunks(text):
 def get_vectorstore(text_chunks):
     load_dotenv()
     embeddings = OpenAIEmbeddings()
-    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
+
+
+def web_scraper(url):
+    html_content = requests.get(url).text
+    soup = BeautifulSoup(html_content, "html.parser")
+    texts = soup.find_all('p' , class_ = "pBody")
+    for text in texts:
+        return (text.get_text())
 
 
 def get_conversation_chain(vectorstore):
@@ -120,7 +122,7 @@ def handle_userinput(user_question):
 
 
 def main():
-    st.set_page_config(page_title="Chat with multiple PDFs",
+    st.set_page_config(page_title="Clarity",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -129,15 +131,16 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs :books:")
-    user_question = st.text_input("Ask a question about your documents:")
+    st.header("Clarity")
+    user_question = st.text_input("Access your personal knowledge base here")
     if user_question:
         handle_userinput(user_question)
 
     with st.sidebar:
         st.subheader("Your documents")
+        st.text_area("Enter the references links")
         pdf_docs = st.file_uploader(
-            "Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
+            "Upload your links and PDFs", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
                 # get pdf text
