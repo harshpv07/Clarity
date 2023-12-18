@@ -96,8 +96,6 @@ def web_scraper(url):
 def get_conversation_chain(vectorstore):
     load_dotenv()
     llm = ChatOpenAI(max_tokens = 3000)
-    #llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":1024})
-
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
@@ -143,16 +141,11 @@ def main():
             "Upload your links and PDFs", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
-                # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
 
-                # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
 
-                # create vector store
                 vectorstore = get_vectorstore(text_chunks)
-
-                # create conversation chain
                 st.session_state.conversation = get_conversation_chain(
                     vectorstore)
 
