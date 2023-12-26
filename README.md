@@ -16,24 +16,7 @@ Follow the below steps to locally install clarity.
 - Done !! 
 
 
-### Working - Slightly technical
 
-
-
-### SEO-friendly URLs
-
-TYPO3 9.5 and later can create SEO friendly URLs if you add the rules to the site config:
-[https://aimeos.org/docs/latest/typo3/setup/#seo-urls](https://aimeos.org/docs/latest/typo3/setup/#seo-urls)
-
-## License
-
-The Aimeos TYPO3 extension is licensed under the terms of the GPL Open Source
-license and is available for free.
-
-## Links
-
-* [Web site](https://aimeos.org/integrations/typo3-shop-extension/)
-* [Documentation](https://aimeos.org/docs/TYPO3)
 * [Forum](https://aimeos.org/help/typo3-extension-f16/)
 * [Issue tracker](https://github.com/aimeos/aimeos-typo3/issues)
 * [Source code](https://github.com/aimeos/aimeos-typo3)
