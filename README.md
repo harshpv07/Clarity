@@ -16,7 +16,3 @@ Follow the below steps to locally install clarity.
 - Done !! 
 
 
-
-* [Forum](https://aimeos.org/help/typo3-extension-f16/)
-* [Issue tracker](https://github.com/aimeos/aimeos-typo3/issues)
-* [Source code](https://github.com/aimeos/aimeos-typo3)
